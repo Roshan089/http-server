@@ -16,10 +16,10 @@ app.post("/health", (req, res) =>{
     
     res.send(`you have ${kidnylen} lenkidneys`)
 })
-
+//gkobal  catches
 app.use(function (err, req, res, next) {
     res.json({
-        msg: "sorry somthing went wrong"
+        msg: "sorry somthing went wrong cccc"
     })
 })
 
