@@ -2,12 +2,19 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const zod = require("zod")
+const z= require("zod")
 
 app.use(express.json());
 
-const  schema=zod.array(zod.number())
+const schema = z.array(z.number())
 
+/*const schema = z.object({
+    email: z.string(),
+    password: z.string(),
+    country: z.literal( "IN").or(z.literal("US")),
+    kidnieys: z.array(z.number()),
+})
+*/
 //route handler
 app.get('/', function(req, res) {
   res.send('Hello World!')
